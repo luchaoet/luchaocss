@@ -44,8 +44,16 @@ export default {
 ```
 
 ### 使用
-```html
-<div class="g-m-10"></div>
+```javascript
+// 全局css文件中加入以下语句
+@luchaocss base; // 加载 reset css，非必须
+@luchaocss utilities;  // 必须引入，自动生成的css将根据该语句写入此文件
+```
+
+```vue
+<div class="g-p-10 g-color-333">luchaocss</div>
+
+<div :class="['g-p-10', 'g-color-333', toggle ? 'g-d-b' : 'g-d-n', {"p-o-1": toggle}]">luchaocss</div>
 ```
 
 ### vscode扩展配合使用
